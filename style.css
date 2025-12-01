@@ -1,0 +1,234 @@
+body {
+    font-family: 'Georgia', serif; /* A nice, classic font */
+    background-color: #f7e0e7; /* Soft Rose Background */
+    color: #4a234f; /* Deep Purple/Maroon Text */
+    margin: 0;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #8c0022; /* Deep Red for importance */
+}
+
+/* --- Slideshow Styling --- */
+.slideshow-container {
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mySlides {
+    width: 100%;
+    height: auto;
+    display: none; /* Hidden by default, JS will show them */
+}
+
+/* --- Secret Message Styling --- */
+.secret-message-lock {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#pin-input {
+    padding: 10px;
+    font-size: 18px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid #8c0022;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8c0022;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a30029;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- The Sudar Letter Styling --- */
+.sudar-letter {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: left;
+    white-space: pre-wrap; /* Preserve line breaks */
+    background-color: #fffafc; /* Slightly off-white paper colour */
+    font-style: italic;
+}
+
+.letter-date, .signature {
+    text-align: right;
+    font-size: small;
+    margin-top: 20px;
+}
+
+.error-text {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* --- Neon Blast Styling --- */
+#neon-blast {
+    position: fixed; /* Screen par fixed rahega */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Content ko center karne ke liye */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark, translucent background */
+    z-index: 999; /* Baaki sab cheezon se upar dikhega */
+    font-family: 'Montserrat', sans-serif; /* Neon ke liye ek accha, modern font */
+    text-align: center;
+    animation: fadeIn 0.5s ease-out; /* Smoothly aane ke liye */
+}
+
+/* Neon Text Effect */
+.neon-text {
+    color: #fff; /* White base color */
+    font-size: 4em; /* Bada size */
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ff00de, /* Pink/Magenta glow */
+        0 0 82px #ff00de,
+        0 0 92px #ff00de,
+        0 0 102px #ff00de,
+        0 0 151px #ff00de;
+    animation: flicker 1.5s infinite alternate; /* Halki flicker animation */
+}
+
+.neon-subtext {
+    color: #fff;
+    font-size: 2em;
+    margin-top: 20px;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #00e7ff, /* Cyan/Blue glow */
+        0 0 42px #00e7ff,
+        0 0 82px #00e7ff;
+}
+
+
+/* Ye class hide karne ke liye */
+.hidden {
+    display: none !important;
+}
+
+/* Optional: Fading animation (Smooth entry) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.8; }
+}
+
+/* Optional: Flicker animation for neon text */
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #ff00de,
+            0 0 82px #ff00de,
+            0 0 92px #ff00de,
+            0 0 102px #ff00de,
+            0 0 151px #ff00de;
+    }
+    20%, 24%, 55% {       
+        text-shadow: none;
+    }
+}
+
+/* Important: Agar aap Montserrat font use karna chahte hain, toh <head> tag mein yeh link add karein: */
+/* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> */
+/* --- Old sudar-letter styling ko isse replace karein --- */
+.sudar-letter {
+    margin-top: 30px;
+    padding: 30px;
+    
+    /* Neon Background Setup */
+    background-color: #0d0016; /* Very Dark Purple/Black background */
+    border: 1px solid #ff00de; /* Pink Neon Border */
+    box-shadow: 0 0 10px #ff00de, 0 0 20px #00e7ff; /* Dual-color box glow */
+    border-radius: 10px;
+    
+    text-align: left;
+    white-space: pre-wrap; 
+    
+    color: #fff; /* Text base color */
+    font-family: 'Montserrat', sans-serif; /* Agar aapne pehle use kiya hai */
+}
+
+/* Neon Glow for all text inside the letter */
+.sudar-letter p, .sudar-letter h3 {
+    color: #fff;
+    /* Neon Text Shadow (Pink Glow) */
+    text-shadow:
+        0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 10px #ff00de,
+        0 0 20px #ff00de;
+    line-height: 1.6; /* Thoda zyada space reading ko easy banata hai */
+    font-style: normal; /* Italic style hata denge */
+}
+
+.sudar-letter h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Thoda aur zyada glow heading ke liye */
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 25px #00e7ff, /* Blue secondary glow */
+        0 0 50px #00e7ff;
+}
+
+.letter-date, .signature {
+    text-align: right;
+    font-size: 1em;
+    margin-top: 30px;
+    /* Signature ko thoda alag color glow de sakte hain */
+    color: #00e7ff; 
+}
+/* --- Secret Message Lock Styling mein badlav --- */
+.secret-message-lock {
+    /* Old background-color: #ffffff; ko replace karein */
+    background-color: #000000; /* Dark background */
+    color: #ff00de; /* Pink text color */
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    /* Box Shadow ko neon glow mein badlein */
+    box-shadow: 0 0 15px #00e7ff;
+}
+
+.secret-message-lock h2, .secret-message-lock p {
+    /* Is section ke text ko bhi neon glow den */
+    text-shadow: 0 0 5px #ff00de;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bday-song" loop autoplay>
+        <source src="happy_bday.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header class="greeting">
+        <h1>🥰🥰Happy Birthday, Meri Pyari Minu..........!!!💖💖💖</h1>
+        <p>This whole day is dedicated to your happiness. Scroll down and enjoy!</p>
+    </header>
+
+    <section class="photo-gallery">
+        <h2>Our Beautiful Journey</h2>
+        <div class="slideshow-container">
+            <img class="mySlides" src="Meghna (11).jpg" alt="Beautiful Memory 1">
+            <img class="mySlides" src="Meghna (10).jpg" alt="Beautiful Memory 2">
+            <img class="mySlides" src="Meghna (12).jpg" alt="Beautiful Memory 3">
+            <img class="mySlides" src="Meghna (13).jpg" alt="Beautiful Memory 4">
+            <img class="mySlides" src="Meghna (14).jpg" alt="Beautiful Memory 5">
+        </div>
+        <button onclick="plusSlides(-1)">&#10094; Previous</button>
+        <button onclick="plusSlides(1)">Next &#10095;</button>
+    </section>
+    <div id="neon-blast" class="hidden">
+    <h1 class="neon-text">Happy Birthday, My Sweet Heart.....!!! ✨</h1>
+    <p class="neon-subtext">You Light Up My World! 💖</p>
+</div>
+    <section class="music-start">
+    <button id="start-music-button">
+        Click to Start the Birthday Magic! ✨
+    </button>
+</section>
+
+    <section class="secret-message-lock">
+        <h2>A Secret Message, Just For You! 🤭</h2>
+        <p>Enter the 3-digit PIN code to unlock a special letter from my heart:</p>
+        
+        <input type="password" id="pin-input" maxlength="3" placeholder="---">
+        <button onclick="checkPin()">Unlock</button>
+
+        <div id="message-content" class="hidden">
+            <div class="sudar-letter">
+                <p class="letter-date">November 19, 2025</p>
+                <h3>Meri pyari MInu, Meri Pyari Beautiful Wife,</h3>
+                <p>My love, a very Happy Birthday to the most amazing person in my life.
+On this day, I don't just celebrate the day you were born, but the day you came into my life and made everything brighter.
+ You are not just my wife; you are my best friend, my soulmate, and the reason I smile every morning.
+You have a heart of gold, a spirit that inspires, and a love that is pure and endless.
+ Thank you for all the memories we've shared, from the smallest tea breaks to the biggest adventures.
+ You make every day feel like a beautiful celebration.</p>
+                <p>I promise to always cherish you, support you, and make you feel as happy as you make me. 
+I look forward to spending countless more birthdays and years with you by my side.
+I love you so much baby.........!!!</p>
+                <p class="signature">Yours forever,<br>Motu</p>
+            </div>
+        </div>
+        <p id="error-message" class="hidden error-text">Wrong PIN. Try again, my love!</p>
+    </section>
+
+    <script src="script.js"></script> </body>
+</html>
